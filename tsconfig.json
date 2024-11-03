@@ -8,6 +8,7 @@
     "strict": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "dist"
   }
 }
