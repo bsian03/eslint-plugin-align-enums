@@ -1,0 +1,30 @@
+{
+  "name": "eslint-plugin-align-enums",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json",
+    "install": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.12.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@stylistic/eslint-plugin": "^2.10.1",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint": "^9.14.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint": "^9.14.0",
+    "typescript": "^5.6.3"
+  }
+}
