@@ -72,7 +72,7 @@ export default createRule({
         }, 0);
 
         node.body.members.forEach((member) => {
-          if (member.computed) return;
+          if (!member.initializer) return;
           const key = member.id;
           if (key.type !== "Identifier") return;
           const source = context.sourceCode;
@@ -81,8 +81,7 @@ export default createRule({
           let expectedEqualPos = Number(spaceBefore) + key.range[1];
           if (alignBy === "equals") expectedEqualPos += maxKeyLength - key.name.length;
 
-          const equalToken = source.getTokenAfter(member.id);
-          if (!equalToken) return;
+          const equalToken = source.getTokenAfter(member.id)!;
           const actualEqualPos = equalToken.range[0];
           const diffEqual = actualEqualPos - expectedEqualPos;
 
