@@ -81,7 +81,8 @@ export default createRule({
           let expectedEqualPos = Number(spaceBefore) + key.range[1];
           if (alignBy === "equals") expectedEqualPos += maxKeyLength - key.name.length;
 
-          const equalToken = source.getTokenAfter(member.id)!;
+          const equalToken = source.getTokenAfter(member.id);
+          if (!equalToken) return;
           const actualEqualPos = equalToken.range[0];
           const diffEqual = actualEqualPos - expectedEqualPos;
 
